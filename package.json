@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "laravel-nuxtjs",
   "description": "A simple Laravel & Nuxtjs starter template",
   "version": "1.0.0",
   "private": true,
