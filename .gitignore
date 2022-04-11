@@ -1,8 +1,10 @@
 /node_modules
+/vendor
 /public/hot
+/public/_nuxt
 /public/storage
 /storage/*.key
-/vendor
+/resources/views/nuxt.blade.php
 .env
 .env.backup
 .phpunit.result.cache
@@ -13,8 +15,9 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
-/node_modules
-.nuxt/
-/public/_nuxt/
+/.nuxt
 *.lock
-*-lock.json
+-lock.json
+*.zip
+.eslintcache
+.gittoken

@@ -1,47 +1,40 @@
 {
-  "name": "laravel-nuxtjs",
-  "description": "A simple Laravel & Nuxtjs starter template",
+  "name": "frontend",
   "version": "1.0.0",
   "private": true,
+  "author": "Mohssine Aboutaj",
   "scripts": {
     "dev": "nuxt -c frontend/nuxt.config.js",
     "build": "nuxt build -c frontend/nuxt.config.js",
     "start": "nuxt start -c frontend/nuxt.config.js",
     "generate": "nuxt generate -c frontend/nuxt.config.js",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore ./frontend/",
+    "lint": "yarn lint:js",
+    "prod": "yarn generate && yarn build",
+    "lint:prettier": "prettier --check .",
+    "lintfix": "prettier --write --list-different . && yarn lint:js --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
-    "core-js": "^3.15.1",
-    "nuxt": "^2.15.7",
-    "vuetify": "^2.5.5"
+    "core-js": "^3.19.3",
+    "nuxt": "^2.15.8",
+    "nuxt-i18n": "^6.28.1",
+    "vee-validate": "3.4.14",
+    "vue": "^2.6.14",
+    "vue-server-renderer": "^2.6.14",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify": "^2.6.1",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.14.7",
-    "@nuxtjs/eslint-config": "^6.0.1",
+    "@babel/eslint-parser": "^7.16.3",
+    "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
-    "@nuxtjs/vuetify": "^1.12.1",
-    "eslint": "^7.29.0",
+    "@nuxtjs/vuetify": "^1.12.3",
+    "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-vue": "^7.12.1",
-    "prettier": "^2.3.2"
-  },
-  "author": {
-    "name": "Mohssine Aboutaj",
-    "email": "mohssineaboutaj1995@gmail.com"
-  },
-  "license": "MIT",
-  "keywords": [
-    "laravel",
-    "nuxtjs",
-    "vuejs",
-    "laravel spa",
-    "spa",
-    "vuetify",
-    "boilerplate",
-    "template",
-    "api"
-  ]
+    "eslint-plugin-nuxt": "^3.1.0",
+    "eslint-plugin-vue": "^8.2.0",
+    "prettier": "^2.5.1"
+  }
 }
