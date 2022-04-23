@@ -1,6 +1,8 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,13 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-header('Access-Control-Allow-Origin: *');
+// header('Access-Control-Allow-Origin: *');
 
 
 // Route::middleware('auth:api')->get('/user', function (Request $request) {
 //   return $request->user();
 // });
 
-Route::get('/', function () {
-  return 'test api';
-});
+Route::apiResource('users', UserController::class);
+Route::apiResource('products', ProductController::class);
+Route::apiResource('categories', CategoryController::class);

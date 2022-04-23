@@ -1,4 +1,5 @@
 import { description, keywords } from './config'
+import { getBaseUrlByEnv } from './utils'
 
 // global mixins
 export const globalMixins = {
@@ -34,6 +35,14 @@ export const globalMixins = {
           class: ['elevation-10', 'my-6', 'mx-auto'],
         },
       }
+    },
+  },
+  methods: {
+    setMediaUrl(path) {
+      return getBaseUrlByEnv() + path
+    },
+    timestanpToLocaleString(timestamp) {
+      return new Date(timestamp).toLocaleString()
     },
   },
 }
